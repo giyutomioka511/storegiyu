@@ -1,51 +1,10 @@
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0c1a url('bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-}
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-}
-.logo {
-  width: 100px;
-  display: block;
-  margin: auto;
-}
-.banner {
-  width: 100%;
-  margin: 20px 0;
-}
-form {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-form input, form select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-}
-button {
-  width: 100%;
-  padding: 10px;
-  background: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-.icons img {
-  width: 40px;
-  margin: 10px;
-}
-footer {
-  text-align: center;
-  margin-top: 30px;
-}
+body { background-color: #0d0d0d; color: white; font-family: sans-serif; margin: 0; padding: 20px; }
+header { text-align: center; }
+.logo { max-width: 120px; }
+.banner { max-width: 100%; margin: 10px auto; }
+.calculator, .testimoni { background: #1a1a1a; padding: 20px; border-radius: 10px; margin-top: 20px; }
+input, select { width: 100%; padding: 10px; margin-top: 10px; background: #111; color: white; border: 1px solid #555; }
+.testimoni-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.testi-card { background: #222; padding: 15px; border-radius: 8px; flex: 1 1 200px; }
+footer { text-align: center; margin-top: 40px; color: #888; }

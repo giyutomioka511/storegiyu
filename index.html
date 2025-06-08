@@ -1,78 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIYU STORE - Top Up Followers</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .calculator, .komentar-section {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    .komentar {
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #262626;
-      border-left: 4px solid #00aaff;
-      margin-bottom: 10px;
-    }
-    .highlight {
-      color: #00ffcc;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIYU STORE</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Top Up Followers Sosial Media</h1>
-  <div class="calculator">
-    <label for="platform">Pilih Platform:</label>
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <img src="assets/banner.png" alt="Banner" class="banner" />
+  </header>
+
+  <section class="calculator">
+    <h2>Kalkulator Followers</h2>
+    <label>Pilih Platform:</label>
     <select id="platform" onchange="updateHarga()">
       <option value="instagram">Instagram Internasional</option>
       <option value="instagram_indo">Instagram Indonesia</option>
-    </select><br><br>
+      <option value="tiktok">TikTok</option>
+      <option value="telegram">Telegram</option>
+      <option value="facebook">Facebook</option>
+    </select>
+    <label>Jumlah Followers:</label>
+    <input type="number" id="jumlah" oninput="updateHarga()" />
+    <p>Total Harga: <span id="totalHarga">Rp 0</span></p>
+  </section>
 
-    <label for="jumlah">Jumlah Followers:</label>
-    <input type="number" id="jumlah" value="0" oninput="updateHarga()"><br><br>
+  
+<section class="testimoni">
+  <h2>Komentar Pelanggan</h2>
+  <div class="testimoni-list">
+<div class="testi-card"><strong>@bluesakura</strong><p>Wah mantap banget followers langsung masuk 🔥</p></div>
+<div class="testi-card"><strong>@gloomcloud</strong><p>Adminnya responsif banget 😍</p></div>
+<div class="testi-card"><strong>@waveghost</strong><p>Nambah followers cepet dan aman</p></div>
+<div class="testi-card"><strong>@moondream</strong><p>Pelayanan bintang lima ⭐⭐⭐⭐⭐</p></div>
+<div class="testi-card"><strong>@serenityx</strong><p>Followers masuknya natural, gak instan</p></div>
+<div class="testi-card"><strong>@yukii__</strong><p>Keren banget hasilnya</p></div>
+<div class="testi-card"><strong>@natsumech</strong><p>Gak nyesel langganan disini!</p></div>
+<div class="testi-card"><strong>@aerolyte</strong><p>Sangat terpercaya, selalu order disini</p></div>
+<div class="testi-card"><strong>@hollowvale</strong><p>Followers aktif beneran 👍</p></div>
+<div class="testi-card"><strong>@crimsonshard</strong><p>Auto explore IG 😎</p></div>
+<div class="testi-card"><strong>@velvetnova</strong><p>Order subuh, masuk pagi 🙌</p></div>
+<div class="testi-card"><strong>@obsidiansky</strong><p>Harga bersahabat, kualitas premium</p></div>
+<div class="testi-card"><strong>@kitsunova</strong><p>Owner humble dan helpful</p></div>
+<div class="testi-card"><strong>@mistveil</strong><p>Sesuai banget sama yang dicari</p></div>
+<div class="testi-card"><strong>@lunarveil</strong><p>Gak ribet prosesnya</p></div>
+<div class="testi-card"><strong>@voidpetal</strong><p>Followers real, bukan angka doang</p></div>
+<div class="testi-card"><strong>@shiranaiyo</strong><p>Sangat membantu buat akun bisnis saya</p></div>
+<div class="testi-card"><strong>@mikanbloom</strong><p>Suka banget sama tampilannya</p></div>
+<div class="testi-card"><strong>@azurehowl</strong><p>Thank you kak, followers masuk semua 😭</p></div>
+<div class="testi-card"><strong>@tomobaka</strong><p>Website-nya aesthetic banget</p></div>
+</div>
+</section>
 
-    <p>Total Harga: <span id="harga">Rp 0</span></p>
-  </div>
+  <footer>
+    <p>© 2025 GIYU STORE</p>
+  </footer>
 
-  <div class="komentar-section">
-    <h2>Komentar</h2>
-    <div class="komentar"><strong>@bluesakura:</strong> wah mantap banget, followers langsung nambah pas order 😍</div>
-    <div class="komentar"><strong>@gloomcloud:</strong> gak nyangka secepat ini, padahal baru coba-coba 😭🙏</div>
-    <div class="komentar"><strong>@waveghost:</strong> makasih banyak min! sekarang akun keliatan rame 🤗</div>
-    <div class="komentar"><strong>@serenityx:</strong> ini sih baru real follower, bukan yang bot-bot itu 😎</div>
-    <div class="komentar"><strong>@yukii__:</strong> adminnya fast respon banget, gak bikin bingung 😁</div>
-    <div class="komentar"><strong>@natsumech:</strong> udah order 2x dan selalu puas, thank you ya 🙏</div>
-  </div>
-
-  <script>
-    function updateHarga() {
-      const platform = document.getElementById("platform").value;
-      const jumlah = parseInt(document.getElementById("jumlah").value) || 0;
-      let hargaPerFollower = 0;
-
-      if (platform === "instagram") {
-        hargaPerFollower = 60;
-      } else if (platform === "instagram_indo") {
-        hargaPerFollower = 450;
-      }
-
-      const total = hargaPerFollower * jumlah;
-      document.getElementById("harga").textContent = "Rp " + total.toLocaleString("id-ID");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
