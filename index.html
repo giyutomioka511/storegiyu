@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GIYU STORE</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIYU STORE - Followers Sosial Media</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <img src="assets/banner.png" alt="Banner" class="banner" />
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <img src="assets/banner.png" alt="Banner" class="banner">
   </header>
 
-  <section class="calculator">
-    <h2>Kalkulator Followers</h2>
-    <label>Pilih Platform:</label>
-    <select id="platform" onchange="updateHarga()">
-      <option value="instagram">Instagram Internasional</option>
-      <option value="instagram_indo">Instagram Indonesia</option>
-      <option value="tiktok">TikTok</option>
-      <option value="telegram">Telegram</option>
-      <option value="facebook">Facebook</option>
-    </select>
-    <label>Jumlah Followers:</label>
-    <input type="number" id="jumlah" oninput="updateHarga()" />
-    <p>Total Harga: <span id="totalHarga">Rp 0</span></p>
-  </section>
+  <main>
+    <section class="calculator">
+      <h2>Kalkulator Followers</h2>
+      <form id="orderForm">
+        <label for="platform">Pilih Platform:</label>
+        <select id="platform">
+          <option value="instagram">Instagram Internasional</option>
+          <option value="instagram_indo">Instagram Indonesia</option>
+          <option value="tiktok">TikTok</option>
+          <option value="telegram">Telegram</option>
+          <option value="facebook">Facebook</option>
+        </select>
 
-  
-<section class="testimoni">
-  <h2>Komentar Pelanggan</h2>
-  <div class="testimoni-list">
+        <label for="jumlah">Jumlah Followers:</label>
+        <input type="number" id="jumlah" placeholder="Masukkan jumlah followers">
+
+        <label for="username">Username/Link:</label>
+        <input type="text" id="username" placeholder="@username atau link">
+
+        <p>Total Harga: <span id="totalHarga">Rp 0</span></p>
+
+        <button type="button" onclick="orderNow()">Pesan Sekarang</button>
+      </form>
+    </section>
+
+    <section class="testimoni">
+      <h2>Komentar Pelanggan</h2>
+      <div class="testimoni-list">
 <div class="testi-card"><strong>@bluesakura</strong><p>Wah mantap banget followers langsung masuk 🔥</p></div>
 <div class="testi-card"><strong>@gloomcloud</strong><p>Adminnya responsif banget 😍</p></div>
 <div class="testi-card"><strong>@waveghost</strong><p>Nambah followers cepet dan aman</p></div>
@@ -51,13 +60,16 @@
 <div class="testi-card"><strong>@mikanbloom</strong><p>Suka banget sama tampilannya</p></div>
 <div class="testi-card"><strong>@azurehowl</strong><p>Thank you kak, followers masuk semua 😭</p></div>
 <div class="testi-card"><strong>@tomobaka</strong><p>Website-nya aesthetic banget</p></div>
-</div>
-</section>
+
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 GIYU STORE</p>
   </footer>
 
+  <a href="https://wa.me/6283138846539" class="wa-float" target="_blank">Chat Admin WhatsApp</a>
   <script src="script.js"></script>
 </body>
 </html>
